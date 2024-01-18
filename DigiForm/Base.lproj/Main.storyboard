@@ -16,9 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dub-Oq-Ab6">
-                                <rect key="frame" x="145" y="504" width="102" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dub-Oq-Ab6">
+                                <rect key="frame" x="145.66666666666666" y="504" width="102" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Show Info">
                                     <fontDescription key="titleFontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="16"/>
@@ -28,20 +27,17 @@
                                     <segue destination="uSb-1A-4kQ" kind="show" id="gqa-2K-iKN"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="eou2" translatesAutoresizingMaskIntoConstraints="NO" id="gIc-tX-dT7">
-                                <rect key="frame" x="76" y="200" width="241" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DigiForm" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fmu-XV-dvt">
-                                <rect key="frame" x="98" y="111" width="197" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DigiForm" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fmu-XV-dvt">
+                                <rect key="frame" x="98" y="111" width="197" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="FIh-wB-RGw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="30"/>
                                 <color key="textColor" red="0.045744400960000001" green="0.47022012400000002" blue="0.087721876510000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sB-63-JsX">
-                                <rect key="frame" x="149" y="427" width="94" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sB-63-JsX">
+                                <rect key="frame" x="149" y="427" width="95" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Fill Form">
                                     <fontDescription key="titleFontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="16"/>
@@ -51,9 +47,26 @@
                                     <segue destination="dDT-1U-1f1" kind="show" id="q7N-SF-daO"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eou2" translatesAutoresizingMaskIntoConstraints="NO" id="gIc-tX-dT7">
+                                <rect key="frame" x="75" y="190" width="243" height="241"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="gIc-tX-dT7" firstAttribute="centerX" secondItem="0sB-63-JsX" secondAttribute="centerX" id="1wi-LG-ihs"/>
+                            <constraint firstItem="Fmu-XV-dvt" firstAttribute="centerX" secondItem="0sB-63-JsX" secondAttribute="centerX" id="5XN-Sb-LUq"/>
+                            <constraint firstItem="Fmu-XV-dvt" firstAttribute="centerX" secondItem="dub-Oq-Ab6" secondAttribute="centerX" id="DKs-bi-rD7"/>
+                            <constraint firstItem="Fmu-XV-dvt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="98" id="ElL-5i-nKA"/>
+                            <constraint firstItem="gIc-tX-dT7" firstAttribute="top" secondItem="Fmu-XV-dvt" secondAttribute="bottom" constant="44" id="NFH-7Q-xYp"/>
+                            <constraint firstItem="Fmu-XV-dvt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="Rrt-zd-qQQ"/>
+                            <constraint firstItem="gIc-tX-dT7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="ZKb-5P-6Sb"/>
+                            <constraint firstItem="Fmu-XV-dvt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="co6-lW-Ump"/>
+                            <constraint firstAttribute="bottom" secondItem="0sB-63-JsX" secondAttribute="bottom" constant="395" id="fxO-Tb-xZW"/>
+                            <constraint firstItem="0sB-63-JsX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="149" id="qCN-AM-7Mz"/>
+                            <constraint firstItem="dub-Oq-Ab6" firstAttribute="top" secondItem="gIc-tX-dT7" secondAttribute="bottom" constant="73" id="rfv-xI-V2e"/>
+                            <constraint firstItem="dub-Oq-Ab6" firstAttribute="top" secondItem="0sB-63-JsX" secondAttribute="bottom" constant="47" id="uvG-4e-tGm"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nnT-2K-Bbp"/>
                     <connections>
@@ -180,16 +193,6 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="sectionIndexBackgroundColor" systemColor="systemMintColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="Eqw-V4-4nz">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Eqw-V4-4nz" id="Jbn-MH-l4X">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vW0-C0-bfK"/>
@@ -235,10 +238,10 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemMintColor">
-            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
-            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
