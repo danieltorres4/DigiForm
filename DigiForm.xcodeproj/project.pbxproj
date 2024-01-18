@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD47D2072B58B781007DDE43 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD47D2062B58B781007DDE43 /* FormViewController.swift */; };
 		BD6897DE2B57619400D43AD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6897DD2B57619400D43AD5 /* AppDelegate.swift */; };
 		BD6897E02B57619400D43AD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6897DF2B57619400D43AD5 /* SceneDelegate.swift */; };
-		BD6897E22B57619400D43AD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6897E12B57619400D43AD5 /* ViewController.swift */; };
+		BD6897E22B57619400D43AD5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6897E12B57619400D43AD5 /* MainViewController.swift */; };
 		BD6897E52B57619400D43AD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD6897E32B57619400D43AD5 /* Main.storyboard */; };
 		BD6897E82B57619400D43AD5 /* DigiForm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD6897E62B57619400D43AD5 /* DigiForm.xcdatamodeld */; };
 		BD6897EA2B57619600D43AD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD6897E92B57619600D43AD5 /* Assets.xcassets */; };
@@ -17,10 +18,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD47D2062B58B781007DDE43 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		BD6897DA2B57619400D43AD5 /* DigiForm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigiForm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD6897DD2B57619400D43AD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD6897DF2B57619400D43AD5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BD6897E12B57619400D43AD5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BD6897E12B57619400D43AD5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BD6897E42B57619400D43AD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BD6897E72B57619400D43AD5 /* DigiForm.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DigiForm.xcdatamodel; sourceTree = "<group>"; };
 		BD6897E92B57619600D43AD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -39,6 +41,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD47D2092B58B7B2007DDE43 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BD47D2062B58B781007DDE43 /* FormViewController.swift */,
+				BD6897E12B57619400D43AD5 /* MainViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		BD6897D12B57619400D43AD5 = {
 			isa = PBXGroup;
 			children = (
@@ -58,9 +69,9 @@
 		BD6897DC2B57619400D43AD5 /* DigiForm */ = {
 			isa = PBXGroup;
 			children = (
+				BD47D2092B58B7B2007DDE43 /* Views */,
 				BD6897DD2B57619400D43AD5 /* AppDelegate.swift */,
 				BD6897DF2B57619400D43AD5 /* SceneDelegate.swift */,
-				BD6897E12B57619400D43AD5 /* ViewController.swift */,
 				BD6897E32B57619400D43AD5 /* Main.storyboard */,
 				BD6897E92B57619600D43AD5 /* Assets.xcassets */,
 				BD6897EB2B57619600D43AD5 /* LaunchScreen.storyboard */,
@@ -141,9 +152,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD6897E22B57619400D43AD5 /* ViewController.swift in Sources */,
+				BD6897E22B57619400D43AD5 /* MainViewController.swift in Sources */,
 				BD6897DE2B57619400D43AD5 /* AppDelegate.swift in Sources */,
 				BD6897E82B57619400D43AD5 /* DigiForm.xcdatamodeld in Sources */,
+				BD47D2072B58B781007DDE43 /* FormViewController.swift in Sources */,
 				BD6897E02B57619400D43AD5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
