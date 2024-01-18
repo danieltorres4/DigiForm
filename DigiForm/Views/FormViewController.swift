@@ -33,10 +33,8 @@ extension FormViewController {
         if let name = nameTextField.text, let lastname = lastnameTextField.text, let secondLastname = secondLastnameTextField.text, let email = emailTextField.text, let phoneNumber = phoneNumberTextField.text {
             
             if(name != "" && lastname != "" && secondLastname != "" && email != "" && phoneNumber != "") {
-                print("SAVED")
                 showAlertWithTwoActions(title: "Trying to save info", message: "Are you sure you want to save your current info?", name: name, lastname: lastname, secondLastname: secondLastname, email: email, phoneNumber: phoneNumber)
             } else {
-                print("CANNOT SAVE")
                 showAlert(title: "Text Fields", message: "All the text fields should be filled")
             }
         }
@@ -56,9 +54,12 @@ extension FormViewController {
     private func showAlertWithTwoActions(title: String, message: String, name: String, lastname: String, secondLastname: String, email: String, phoneNumber: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let acceptAction = UIAlertAction(title: "OK", style: .default) { _ in
-            self.insertUserInfo(name: name, lastname: lastname, secondLastname: secondLastname, email: email, phoneNumber: phoneNumber)
-            self.showAlert(title: "Info saved", message: "Your info has been saved")
-            self.clearTextFields()
+            if(self.insertUserInfo(name: name, lastname: lastname, secondLastname: secondLastname, email: email, phoneNumber: phoneNumber)) {
+                self.showAlert(title: "Info saved", message: "Your info has been saved")
+                self.clearTextFields()
+            } else {
+                self.showAlert(title: "Error", message: "Your info has not been saved. Try again, please.")
+            }
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .destructive)
