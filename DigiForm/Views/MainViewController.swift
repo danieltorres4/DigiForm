@@ -16,14 +16,8 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    @IBAction func didTapFillFormBtn(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let formVC = storyboard.instantiateViewController(withIdentifier: "FormViewControllerID")
-        self.present(formVC, animated: true)
-    }
-    
     @IBAction func didTapShowInfoBtn(_ sender: Any) {
-        if let value = Database.shared.readUserInfo() {
+        if let value = Database.shared.readUserInfo(), value.count > 0 {
             showAlert(title: "Data Found", message: "Name: \(value)")
         } else {
             showAlert(title: "Error", message: "Cannot found data. You have not saved your info yet")

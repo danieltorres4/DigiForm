@@ -33,22 +33,24 @@ class Database {
         }
     }
     
-    func readUserInfo() -> String? {
+    func readUserInfo() -> [String]? {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return nil }
         let context = appDelegate.persistentContainer.viewContext
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
         
         do {
             let result = try context.fetch(request)
-            guard let returnedValue = result.last as? NSManagedObject else { return nil }
+            //guard let returnedValue = result as? NSManagedObject else { return nil }
             
             for data in result as! [NSManagedObject] {
-                print(data.value(forKey: "name") as! String)
+                print("Info: ",data.value(forKey: "name") as! String)
             }
             
-            guard let value = returnedValue.value(forKey: "name") as? String else { return nil }
+            //guard let value = returnedValue.value(forKey: "name") as? [String] else { return nil }
             
-            return value
+            let names = result.compactMap { ($0 as? NSManagedObject)?.value(forKey: "name") as? String }
+            
+            return names
         } catch {
             print("Error while reading User DB")
             return nil
