@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BD47D2072B58B781007DDE43 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD47D2062B58B781007DDE43 /* FormViewController.swift */; };
 		BD47D20C2B58D4EF007DDE43 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD47D20B2B58D4EF007DDE43 /* Database.swift */; };
+		BD47D2102B58E882007DDE43 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD47D20F2B58E882007DDE43 /* UserInfo.swift */; };
 		BD6897DE2B57619400D43AD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6897DD2B57619400D43AD5 /* AppDelegate.swift */; };
 		BD6897E02B57619400D43AD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6897DF2B57619400D43AD5 /* SceneDelegate.swift */; };
 		BD6897E22B57619400D43AD5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6897E12B57619400D43AD5 /* MainViewController.swift */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		BD47D2062B58B781007DDE43 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		BD47D20B2B58D4EF007DDE43 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		BD47D20F2B58E882007DDE43 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		BD6897DA2B57619400D43AD5 /* DigiForm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigiForm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD6897DD2B57619400D43AD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD6897DF2B57619400D43AD5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +70,14 @@
 			path = Database;
 			sourceTree = "<group>";
 		};
+		BD47D20E2B58E85A007DDE43 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BD47D20F2B58E882007DDE43 /* UserInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		BD6897D12B57619400D43AD5 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +97,7 @@
 		BD6897DC2B57619400D43AD5 /* DigiForm */ = {
 			isa = PBXGroup;
 			children = (
+				BD47D20E2B58E85A007DDE43 /* Models */,
 				BD47D20A2B58D4E3007DDE43 /* Providers */,
 				BD47D2092B58B7B2007DDE43 /* Views */,
 				BD6897DD2B57619400D43AD5 /* AppDelegate.swift */,
@@ -176,6 +187,7 @@
 				BD6897DE2B57619400D43AD5 /* AppDelegate.swift in Sources */,
 				BD6897E82B57619400D43AD5 /* DigiForm.xcdatamodeld in Sources */,
 				BD47D2072B58B781007DDE43 /* FormViewController.swift in Sources */,
+				BD47D2102B58E882007DDE43 /* UserInfo.swift in Sources */,
 				BD6897E02B57619400D43AD5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
