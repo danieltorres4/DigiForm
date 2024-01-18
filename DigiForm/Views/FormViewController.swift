@@ -33,12 +33,11 @@ extension FormViewController {
             
             if(name != "" && lastname != "" && secondLastname != "" && email != "" && phoneNumber != "") {
                 print("SAVED")
-                showAlert(title: "Saved", message: "Your info has been saved successfully")
+                showAlertWithTwoActions(title: "Trying to save info", message: "Are you sure you want to save your current info?")
             } else {
                 print("CANNOT SAVE")
                 showAlert(title: "Text Fields", message: "All the text fields should be filled")
             }
-            
         }
     }
     
@@ -51,5 +50,28 @@ extension FormViewController {
         alert.addAction(action)
         
         present(alert, animated: true, completion: nil)
+    }
+    
+    private func showAlertWithTwoActions(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let acceptAction = UIAlertAction(title: "OK", style: .default) { _ in
+            self.showAlert(title: "Info saved", message: "Your info has been saved")
+            self.clearTextFields()
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .destructive)
+        
+        alert.addAction(acceptAction)
+        alert.addAction(cancelAction)
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    private func clearTextFields() {
+        nameTextField.text = ""
+        lastnameTextField.text = ""
+        secondLastnameTextField.text = ""
+        phoneNumberTextField.text = ""
+        emailTextField.text = ""
     }
 }
