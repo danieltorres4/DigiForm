@@ -26,6 +26,7 @@ class FormViewController: UIViewController {
 }
 
 
+/// Validations and alerts
 extension FormViewController {
     private func validateTextFieldEntries() {
         
@@ -33,7 +34,7 @@ extension FormViewController {
             
             if(name != "" && lastname != "" && secondLastname != "" && email != "" && phoneNumber != "") {
                 print("SAVED")
-                showAlertWithTwoActions(title: "Trying to save info", message: "Are you sure you want to save your current info?")
+                showAlertWithTwoActions(title: "Trying to save info", message: "Are you sure you want to save your current info?", name: name, lastname: lastname, secondLastname: secondLastname, email: email, phoneNumber: phoneNumber)
             } else {
                 print("CANNOT SAVE")
                 showAlert(title: "Text Fields", message: "All the text fields should be filled")
@@ -52,9 +53,10 @@ extension FormViewController {
         present(alert, animated: true, completion: nil)
     }
     
-    private func showAlertWithTwoActions(title: String, message: String) {
+    private func showAlertWithTwoActions(title: String, message: String, name: String, lastname: String, secondLastname: String, email: String, phoneNumber: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let acceptAction = UIAlertAction(title: "OK", style: .default) { _ in
+            self.insertUserInfo(name: name, lastname: lastname, secondLastname: secondLastname, email: email, phoneNumber: phoneNumber)
             self.showAlert(title: "Info saved", message: "Your info has been saved")
             self.clearTextFields()
         }
@@ -73,5 +75,13 @@ extension FormViewController {
         secondLastnameTextField.text = ""
         phoneNumberTextField.text = ""
         emailTextField.text = ""
+    }
+}
+
+
+/// Database methods
+private extension FormViewController {
+    func insertUserInfo(name: String, lastname: String, secondLastname: String, email: String, phoneNumber: String) -> Bool {
+        return Database.shared.insertUserInfo(name: name, lastname: lastname, secondLastname: secondLastname, email: email, phoneNumber: phoneNumber)
     }
 }

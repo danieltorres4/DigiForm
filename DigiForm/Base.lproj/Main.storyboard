@@ -24,6 +24,9 @@
                                     <fontDescription key="titleFontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="16"/>
                                     <color key="baseBackgroundColor" red="0.1214102379" green="0.47022012400000002" blue="0.2117255992" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapShowInfoBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qhJ-6y-lf9"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="eou2" translatesAutoresizingMaskIntoConstraints="NO" id="gIc-tX-dT7">
                                 <rect key="frame" x="76" y="200" width="240" height="128"/>
