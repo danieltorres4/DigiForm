@@ -15,5 +15,14 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    @IBAction func didTapFillFormBtn(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let formVC = storyboard.instantiateViewController(withIdentifier: "FormViewControllerID")
+        self.present(formVC, animated: true)
+    }
+    
+    @IBAction func didTapShowInfoBtn(_ sender: Any) {
+    }
 }
 
