@@ -10,9 +10,18 @@ import CoreData
 import UIKit
 
 class Database {
+    // Singleton
     static let shared = Database()
     private init() {}
     
+    /// Inserts a UserInfo into CoreData database
+    /// - Parameter name: user's name
+    /// - Parameter lastname: user's lastname
+    /// - Parameter secondLastname: user's second lastname
+    /// - Parameter email: user's email
+    /// - Parameter phoneNumber: user's phone number
+    ///
+    /// - Returns  True if the inserts is successful. Otherwise, false
     func insertUserInfo(name: String, lastname: String, secondLastname: String, email: String, phoneNumber: String) -> Bool {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return false }
         let context = appDelegate.persistentContainer.viewContext
@@ -33,6 +42,8 @@ class Database {
         }
     }
     
+    /// Get user info from CoreData database
+    /// - Returns [UserInfo]: an array with all de users stored
     func readUserInfo() -> [UserInfo]? {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return nil }
         let context = appDelegate.persistentContainer.viewContext

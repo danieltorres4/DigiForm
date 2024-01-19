@@ -19,6 +19,7 @@ class FormViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // BACKGROUND COLOR
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [UIColor.systemTeal.cgColor, UIColor.systemMint.cgColor]
         gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
@@ -35,6 +36,7 @@ class FormViewController: UIViewController {
 
 /// Validations and alerts
 extension FormViewController {
+    /// Validates the whole textfields with regex
     private func validateTextFieldEntries() {
         
         if let name = nameTextField.text, let lastname = lastnameTextField.text, let secondLastname = secondLastnameTextField.text, let email = emailTextField.text, let phoneNumber = phoneNumberTextField.text {

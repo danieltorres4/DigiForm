@@ -10,10 +10,11 @@ import UIKit
 class ShowInfoViewController: UIViewController {
 
     @IBOutlet weak var userInfoTableView: UITableView!
-    private var userInfoArray: [UserInfo] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // BACKGROUND COLOR
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [UIColor.systemTeal.cgColor, UIColor.systemMint.cgColor]
         gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
@@ -21,6 +22,7 @@ class ShowInfoViewController: UIViewController {
         gradientLayer.frame = view.bounds
         view.layer.insertSublayer(gradientLayer, at: 0)
         
+        // CUSTOM CELL
         let nib = UINib(nibName: "UserInfoTableViewCell", bundle: nil)
         userInfoTableView.register(nib, forCellReuseIdentifier: "UserInfoTableViewCell")
         userInfoTableView.delegate = self
@@ -45,7 +47,11 @@ extension ShowInfoViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = userInfoTableView.dequeueReusableCell(withIdentifier: "UserInfoTableViewCell", for: indexPath) as! UserInfoTableViewCell
         guard let userInfo = Database.shared.readUserInfo(), userInfo.count > 0 else {
-            cell.textLabel?.text = "Cannot obtain data from DB"
+            // Drawing default data if there is no info stored
+            cell.fullNameLabel.text = ""
+            cell.emailLabel.text = "No information stored in database"
+            cell.phoneNumberLabel.text = ""
+            cell.userImageView.image = UIImage(systemName: "person.2.slash.fill")
             return cell
         }
         
