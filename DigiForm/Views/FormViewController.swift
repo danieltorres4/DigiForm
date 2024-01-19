@@ -39,10 +39,18 @@ extension FormViewController {
         
         if let name = nameTextField.text, let lastname = lastnameTextField.text, let secondLastname = secondLastnameTextField.text, let email = emailTextField.text, let phoneNumber = phoneNumberTextField.text {
             
-            if(name != "" && lastname != "" && secondLastname != "" && email != "" && phoneNumber != "") {
-                showAlertWithTwoActions(title: "Trying to save info", message: "Are you sure you want to save your current info?", name: name, lastname: lastname, secondLastname: secondLastname, email: email, phoneNumber: phoneNumber)
+            if(name.isValidWith(regexType: .name) && lastname.isValidWith(regexType: .name) && secondLastname.isValidWith(regexType: .name)) {
+                if(email.isValidWith(regexType: .email)) {
+                    if(phoneNumber.isValidWith(regexType: .onlyNumbers)) {
+                        showAlertWithTwoActions(title: "Trying to save info", message: "Are you sure you want to save your current info?", name: name, lastname: lastname, secondLastname: secondLastname, email: email, phoneNumber: phoneNumber)
+                    } else {
+                        showAlert(title: "Phone number", message: "Phone number must contain only numbers", dbResponse: false)
+                    }
+                } else {
+                    showAlert(title: "Email", message: "Invalid email", dbResponse: false)
+                }
             } else {
-                showAlert(title: "Text Fields", message: "All the text fields should be filled", dbResponse: false)
+                showAlert(title: "Text Fields", message: "First name and last name fields must contain only letters", dbResponse: false)
             }
         }
     }
