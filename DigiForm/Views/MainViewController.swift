@@ -11,6 +11,8 @@ class MainViewController: UIViewController {
 
     @IBOutlet weak var fillFormBtn: UIButton!
     @IBOutlet weak var showInfoBtn: UIButton!
+    @IBOutlet weak var mainImageView: UIImageView!
+    @IBOutlet weak var digiFormTitleLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

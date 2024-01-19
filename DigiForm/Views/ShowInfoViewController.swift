@@ -35,6 +35,7 @@ class ShowInfoViewController: UIViewController {
 extension ShowInfoViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("You tapped me")
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
@@ -59,6 +60,7 @@ extension ShowInfoViewController: UITableViewDataSource {
         cell.fullNameLabel.text = "\(user.name) \(user.lastname) \(user.secondLastname)"
         cell.emailLabel.text = "Email: \(user.email)"
         cell.phoneNumberLabel.text = "Phone number: \(user.phoneNumber)"
+        cell.userImageView.image = (indexPath.row % 2 == 0) ? UIImage(systemName: "person.fill") : UIImage(systemName: "person")
         
         return cell
     }
