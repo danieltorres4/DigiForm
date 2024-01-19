@@ -42,15 +42,17 @@ extension FormViewController {
             if(name != "" && lastname != "" && secondLastname != "" && email != "" && phoneNumber != "") {
                 showAlertWithTwoActions(title: "Trying to save info", message: "Are you sure you want to save your current info?", name: name, lastname: lastname, secondLastname: secondLastname, email: email, phoneNumber: phoneNumber)
             } else {
-                showAlert(title: "Text Fields", message: "All the text fields should be filled")
+                showAlert(title: "Text Fields", message: "All the text fields should be filled", dbResponse: false)
             }
         }
     }
     
-    private func showAlert(title: String, message: String) {
+    private func showAlert(title: String, message: String, dbResponse: Bool) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default) { _ in
-            
+            if(dbResponse) {
+                self.navigationController?.popToRootViewController(animated: true)
+            }
         }
         
         alert.addAction(action)
@@ -61,11 +63,12 @@ extension FormViewController {
     private func showAlertWithTwoActions(title: String, message: String, name: String, lastname: String, secondLastname: String, email: String, phoneNumber: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let acceptAction = UIAlertAction(title: "OK", style: .default) { _ in
-            if(self.insertUserInfo(name: name, lastname: lastname, secondLastname: secondLastname, email: email, phoneNumber: phoneNumber)) {
-                self.showAlert(title: "Info saved", message: "Your info has been saved")
+            let insertIntoDBResponse = self.insertUserInfo(name: name, lastname: lastname, secondLastname: secondLastname, email: email, phoneNumber: phoneNumber)
+            if(insertIntoDBResponse) {
+                self.showAlert(title: "Info saved", message: "Your info has been saved", dbResponse: insertIntoDBResponse)
                 self.clearTextFields()
             } else {
-                self.showAlert(title: "Error", message: "Your info has not been saved. Try again, please.")
+                self.showAlert(title: "Error", message: "Your info has not been saved. Try again, please.", dbResponse: insertIntoDBResponse)
             }
         }
         
