@@ -114,6 +114,8 @@ class FormViewController: UIViewController {
         textField.font = UIFont(name: "Rockwell", size: 12)
         textField.borderStyle = .roundedRect
         textField.textColor = UIColor(red: 28/255.0, green: 103/255.0, blue: 41/255.0, alpha: 1.0)
+        textField.autocapitalizationType = .none
+        textField.autocorrectionType = .no
         textField.keyboardType = .emailAddress
         textField.translatesAutoresizingMaskIntoConstraints = false
         
@@ -152,12 +154,8 @@ class FormViewController: UIViewController {
         
         // BACKGROUND COLOR
         view.backgroundColor = UIColor(red: 42/255.0, green: 162/255.0, blue: 186/255.0, alpha: 1.0)
-        
+        title = "Fill the Form"
         setup()
-    }
-
-    @IBAction func didTapSaveBtn(_ sender: Any) {
-        validateTextFieldEntries()
     }
 }
 
@@ -298,7 +296,7 @@ extension FormViewController {
     }
     
     @objc func saveFormAction() {
-        
+        validateTextFieldEntries()
     }
 }
 
