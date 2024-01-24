@@ -22,36 +22,6 @@
             </objects>
             <point key="canvasLocation" x="2822.7906976744184" y="-2.5751072961373391"/>
         </scene>
-        <!--Fill the Form-->
-        <scene sceneID="UFf-bL-eXZ">
-            <objects>
-                <viewController storyboardIdentifier="FormViewControllerID" id="dDT-1U-1f1" customClass="FormViewController" customModule="DigiForm" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="yFW-7H-JI2">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="UJ2-dq-HQo"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Fill the Form" id="fSJ-3D-Jf0"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xU6-pi-HcZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3747" y="-3"/>
-        </scene>
-        <!--Storage-->
-        <scene sceneID="bo3-hn-oM5">
-            <objects>
-                <viewController id="uSb-1A-4kQ" customClass="ShowInfoViewController" customModule="DigiForm" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hob-Jz-huq">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="vW0-C0-bfK"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Storage" id="UUF-Cq-loi"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1vu-2A-TSW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4595" y="-3"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="bCD-LX-vCa">
             <objects>
