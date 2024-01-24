@@ -77,7 +77,6 @@ extension MainViewController {
     
     private func configureConstraints() {
         // CONSTRAINTS
-        var gridValue = (view.bounds.width) / 5
         NSLayoutConstraint.activate([
             mainLabel.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 20),
             mainLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor),
