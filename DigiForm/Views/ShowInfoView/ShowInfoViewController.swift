@@ -9,7 +9,6 @@ import UIKit
 
 class ShowInfoViewController: UIViewController {
 
-    //@IBOutlet weak var userInfoTableView: UITableView!
     private let userInfoTableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -20,11 +19,10 @@ class ShowInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "User's Info"
+        title = "Storage"
         
         // BACKGROUND COLOR
         view.backgroundColor = UIColor(red: 42/255.0, green: 162/255.0, blue: 186/255.0, alpha: 1.0)
-        userInfoTableView.backgroundColor = .orange
         view.addSubview(userInfoTableView)
         
         // CONSTRAINTS
