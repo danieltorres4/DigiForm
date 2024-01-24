@@ -20,6 +20,7 @@
 		BD6897E82B57619400D43AD5 /* DigiForm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD6897E62B57619400D43AD5 /* DigiForm.xcdatamodeld */; };
 		BD6897EA2B57619600D43AD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD6897E92B57619600D43AD5 /* Assets.xcassets */; };
 		BD6897ED2B57619600D43AD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD6897EB2B57619600D43AD5 /* LaunchScreen.storyboard */; };
+		BDABAE922B609D990016C50E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDABAE912B609D980016C50E /* MainView.swift */; };
 		BDC2549D2B5A10AF00A1D722 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2549C2B5A10AF00A1D722 /* StringExtensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		BD6897E92B57619600D43AD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD6897EC2B57619600D43AD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD6897EE2B57619600D43AD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDABAE912B609D980016C50E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		BDC2549C2B5A10AF00A1D722 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +62,7 @@
 				BD47D2062B58B781007DDE43 /* FormViewController.swift */,
 				BD6897E12B57619400D43AD5 /* MainViewController.swift */,
 				BD47D2112B58FAC7007DDE43 /* ShowInfoViewController.swift */,
+				BDABAE912B609D980016C50E /* MainView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				BD47D2162B59A114007DDE43 /* UserInfoTableViewCell.swift in Sources */,
 				BD47D2122B58FAC7007DDE43 /* ShowInfoViewController.swift in Sources */,
 				BD6897E82B57619400D43AD5 /* DigiForm.xcdatamodeld in Sources */,
+				BDABAE922B609D990016C50E /* MainView.swift in Sources */,
 				BD47D2072B58B781007DDE43 /* FormViewController.swift in Sources */,
 				BD47D2102B58E882007DDE43 /* UserInfo.swift in Sources */,
 				BD6897E02B57619400D43AD5 /* SceneDelegate.swift in Sources */,
