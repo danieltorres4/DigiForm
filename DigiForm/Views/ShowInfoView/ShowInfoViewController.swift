@@ -20,6 +20,8 @@ class ShowInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "User's Info"
+        
         // BACKGROUND COLOR
         view.backgroundColor = UIColor(red: 42/255.0, green: 162/255.0, blue: 186/255.0, alpha: 1.0)
         userInfoTableView.backgroundColor = .orange
@@ -34,8 +36,7 @@ class ShowInfoViewController: UIViewController {
         ])
         
         // CUSTOM CELL
-        let nib = UINib(nibName: "UserInfoTableViewCell", bundle: nil)
-        userInfoTableView.register(nib, forCellReuseIdentifier: "UserInfoTableViewCell")
+        userInfoTableView.register(UserInfoTableViewCell.self, forCellReuseIdentifier: "UserInfoTableViewCell")
         userInfoTableView.delegate = self
         userInfoTableView.dataSource = self
         userInfoTableView.backgroundColor = .systemTeal
@@ -60,18 +61,14 @@ extension ShowInfoViewController: UITableViewDataSource {
         let cell = userInfoTableView.dequeueReusableCell(withIdentifier: "UserInfoTableViewCell", for: indexPath) as! UserInfoTableViewCell
         guard let userInfo = Database.shared.readUserInfo(), userInfo.count > 0 else {
             // Drawing default data if there is no info stored
-            cell.fullNameLabel.text = ""
-            cell.emailLabel.text = "No information stored in database"
-            cell.phoneNumberLabel.text = ""
-            cell.userImageView.image = UIImage(systemName: "person.2.slash.fill")
+            cell.drawUserData(user: UserInfo(name: "", lastname: "", secondLastname: "", email: "No Data Found", phoneNumber: "Try again later"), resource: "")
             return cell
         }
         
         let user = userInfo[indexPath.row]
-        cell.fullNameLabel.text = "\(user.name) \(user.lastname) \(user.secondLastname)"
-        cell.emailLabel.text = "Email: \(user.email)"
-        cell.phoneNumberLabel.text = "Phone number: \(user.phoneNumber)"
-        cell.userImageView.image = (indexPath.row % 2 == 0) ? UIImage(systemName: "person.fill") : UIImage(systemName: "person")
+        //cell.userImageView.image = (indexPath.row % 2 == 0) ? UIImage(systemName: "person.fill") : UIImage(systemName: "person")
+        cell.backgroundColor = (indexPath.row % 2 == 0) ? UIColor(red: 42/255.0, green: 162/255.0, blue: 186/255.0, alpha: 1.0) : .systemTeal
+        cell.drawUserData(user: user, resource: "")
         
         return cell
     }
