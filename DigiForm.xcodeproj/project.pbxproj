@@ -21,7 +21,6 @@
 		BD6897EA2B57619600D43AD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD6897E92B57619600D43AD5 /* Assets.xcassets */; };
 		BD6897ED2B57619600D43AD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD6897EB2B57619600D43AD5 /* LaunchScreen.storyboard */; };
 		BDABAE922B609D990016C50E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDABAE912B609D980016C50E /* MainView.swift */; };
-		BDABAE972B60A51B0016C50E /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDABAE962B60A51B0016C50E /* FormView.swift */; };
 		BDC2549D2B5A10AF00A1D722 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2549C2B5A10AF00A1D722 /* StringExtensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,7 +41,6 @@
 		BD6897EC2B57619600D43AD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD6897EE2B57619600D43AD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDABAE912B609D980016C50E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		BDABAE962B60A51B0016C50E /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		BDC2549C2B5A10AF00A1D722 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,7 +146,6 @@
 			isa = PBXGroup;
 			children = (
 				BD47D2062B58B781007DDE43 /* FormViewController.swift */,
-				BDABAE962B60A51B0016C50E /* FormView.swift */,
 			);
 			path = FormView;
 			sourceTree = "<group>";
@@ -241,7 +238,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDABAE972B60A51B0016C50E /* FormView.swift in Sources */,
 				BD47D20C2B58D4EF007DDE43 /* Database.swift in Sources */,
 				BD6897E22B57619400D43AD5 /* MainViewController.swift in Sources */,
 				BDC2549D2B5A10AF00A1D722 /* StringExtensions.swift in Sources */,
