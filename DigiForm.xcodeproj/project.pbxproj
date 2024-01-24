@@ -58,11 +58,10 @@
 		BD47D2092B58B7B2007DDE43 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BDABAE952B60A3C80016C50E /* ShowInfoView */,
+				BDABAE942B60A3BE0016C50E /* FormView */,
+				BDABAE932B60A3A90016C50E /* MainView */,
 				BD47D2132B59A0EB007DDE43 /* Reusable */,
-				BD47D2062B58B781007DDE43 /* FormViewController.swift */,
-				BD6897E12B57619400D43AD5 /* MainViewController.swift */,
-				BD47D2112B58FAC7007DDE43 /* ShowInfoViewController.swift */,
-				BDABAE912B609D980016C50E /* MainView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -132,6 +131,31 @@
 				BD6897E62B57619400D43AD5 /* DigiForm.xcdatamodeld */,
 			);
 			path = DigiForm;
+			sourceTree = "<group>";
+		};
+		BDABAE932B60A3A90016C50E /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				BD6897E12B57619400D43AD5 /* MainViewController.swift */,
+				BDABAE912B609D980016C50E /* MainView.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		BDABAE942B60A3BE0016C50E /* FormView */ = {
+			isa = PBXGroup;
+			children = (
+				BD47D2062B58B781007DDE43 /* FormViewController.swift */,
+			);
+			path = FormView;
+			sourceTree = "<group>";
+		};
+		BDABAE952B60A3C80016C50E /* ShowInfoView */ = {
+			isa = PBXGroup;
+			children = (
+				BD47D2112B58FAC7007DDE43 /* ShowInfoViewController.swift */,
+			);
+			path = ShowInfoView;
 			sourceTree = "<group>";
 		};
 		BDC2549B2B5A10A100A1D722 /* Helpers */ = {
