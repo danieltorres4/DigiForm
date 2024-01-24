@@ -9,18 +9,29 @@ import UIKit
 
 class ShowInfoViewController: UIViewController {
 
-    @IBOutlet weak var userInfoTableView: UITableView!
+    //@IBOutlet weak var userInfoTableView: UITableView!
+    private let userInfoTableView: UITableView = {
+        let tableView = UITableView()
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        
+        return tableView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // BACKGROUND COLOR
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [UIColor.systemTeal.cgColor, UIColor.systemMint.cgColor]
-        gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
-        gradientLayer.endPoint = CGPoint(x: 1.0, y: 1.0)
-        gradientLayer.frame = view.bounds
-        view.layer.insertSublayer(gradientLayer, at: 0)
+        view.backgroundColor = UIColor(red: 42/255.0, green: 162/255.0, blue: 186/255.0, alpha: 1.0)
+        userInfoTableView.backgroundColor = .orange
+        view.addSubview(userInfoTableView)
+        
+        // CONSTRAINTS
+        NSLayoutConstraint.activate([
+            userInfoTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            userInfoTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            userInfoTableView.topAnchor.constraint(equalTo: view.topAnchor),
+            userInfoTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
         
         // CUSTOM CELL
         let nib = UINib(nibName: "UserInfoTableViewCell", bundle: nil)

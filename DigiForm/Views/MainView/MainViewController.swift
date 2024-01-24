@@ -108,10 +108,9 @@ extension MainViewController {
     }
     
     @objc func showSavedDataVC() {
-        print("SHOW SAVED DATA")
         if let userInfo = Database.shared.readUserInfo(), userInfo.count > 0 {
             // push view controller
-            print("SAVED DATA\n\(userInfo)")
+            self.navigationController?.pushViewController(ShowInfoViewController(), animated: true)
         } else {
             // alert
             showAlert(title: "Error", message: "There is no info saved yet", dbResponse: false)
